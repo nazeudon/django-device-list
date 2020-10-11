@@ -10,7 +10,7 @@ class DeviceViewSet(viewsets.ModelViewSet):
     serializer_class = DeviceSerializer
 
     def post(self, request, *args, **kwargs):
-        img = request.data['img']
+        image = request.data['image']
         title = request.data['title']
-        Device.objects.create(title=title, img=img)
+        Device.objects.create(title=title, image=image)
         return HttpResponse({'message': 'New device created'}, status=200)

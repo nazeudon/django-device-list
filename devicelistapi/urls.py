@@ -22,7 +22,7 @@ from django.conf import settings
 
 urlpatterns = [
     # path('api', include('api.urls'))だとなぜかエラーになる
-    path('', include('api.urls')),
+    path('api/', include('api.urls')),
     path('admin/', admin.site.urls),
 ]
 
